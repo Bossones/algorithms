@@ -93,3 +93,18 @@ public class FenwickTree {
     }
 
 }
+
+/*
+    output:
+        1
+        2
+        3
+        4
+        Sum k = 4 is: 10
+        Sum from 0 to 2 is: 3
+        Set new element to index 2, 500
+        1
+        2
+        500
+        4
+ */
