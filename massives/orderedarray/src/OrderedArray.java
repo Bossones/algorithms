@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class OrderedArray {
 
@@ -39,7 +38,7 @@ public class OrderedArray {
     private int find(int element, int down, int up, int cur) {
         if (orderedArray[cur] == element)
             return cur;
-        else if (down > up)
+        else if (down >= up)
             return -1;
         else {
             if (orderedArray[cur] > element)
