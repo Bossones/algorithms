@@ -24,4 +24,10 @@ public final class TwoModBubbleSort {
         }
         return array;
     }
+
+    public static double median(int[] array) {
+        int[] sortArray = TwoModBubbleSort.sort(array);
+        return (sortArray.length % 2 == 0) ? (sortArray[array.length / 2] + sortArray[array.length / 2 - 1]) / (double)2 :
+                sortArray[array.length / 2];
+    }
 }

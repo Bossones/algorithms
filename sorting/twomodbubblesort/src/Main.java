@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(TwoModBubbleSort.sort(new int[] {5, 3, 2, 4, 6, 2, 1, 10, 7, 9, 123, 4, -2, -3, -6})));
+        System.out.println(TwoModBubbleSort.median(new int[] {8, 4, 5, 1, 3, 2, 7, 6, 9}));
+        System.out.println((1 + 2 + 3 + 4 + 5 + 6 + 7 + 8) / 2.0);
     }
 }
