@@ -12,24 +12,28 @@ public class Stack<T> implements Iterable<T> {
     }
 
     public void add(T element) {
-        linkedList.addFirst(element);
+        linkedList.addLast(element);
     }
 
     public T remove() {
-        return linkedList.removeFirst();
+        return linkedList.removeLast();
     }
 
     public T peek() {
-        return linkedList.peekFirst();
+        return linkedList.peekLast();
     }
 
     public void set(T element) {
-        linkedList.removeFirst();
-        linkedList.addFirst(element);
+        linkedList.removeLast();
+        linkedList.addLast(element);
     }
 
     public boolean isEmpty() {
         return linkedList.isEmpty();
+    }
+
+    public int size() {
+        return linkedList.size();
     }
 
     @Override
