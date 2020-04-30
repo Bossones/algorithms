@@ -10,6 +10,7 @@ public class Calculator {
 
     public static double calculate(String expression) {
         expression = Objects.requireNonNullElse(expression, "0.0");
+        if (expression.equals("")) expression = "0.0";
         LinkedList<String> polishNote = PolishNotation.makeNote(expression);
         ListIterator<String> iterPolishNote = polishNote.iterator();
         while (polishNote.size() != 1 && !polishNote.isEmpty()) {
