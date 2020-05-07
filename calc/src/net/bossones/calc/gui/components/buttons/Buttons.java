@@ -24,13 +24,18 @@ public class Buttons {
     public static JButton equals = new JButton("=");
     public static JButton clearAll = new JButton("C");
 
-    public static JButton[] allButtons = new JButton[] {
-      plusButton, substButton, obButton,
-      multButton, divButton, zeroButton,
-      oneButton, twoButton, cbButton,
-      threeButton, fourButton, fiveButton,
-      sixButton, sevenButton, eightButton,
-      nineButton, pointButton, clearAll,
-      backButton, equals
+    public static JButton[] digitButtons = new JButton[] {
+            zeroButton, oneButton, twoButton,
+            threeButton, fourButton, fiveButton,
+            sixButton, sevenButton, eightButton,
+            nineButton, obButton, cbButton
+    };
+
+    public static JButton[] operatorButtons = new JButton[] {
+            plusButton, substButton, multButton, divButton
+    };
+
+    public static JButton[] otherButtons = new JButton[] {
+            pointButton, backButton, clearAll, equals
     };
 }

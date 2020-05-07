@@ -6,8 +6,16 @@ import net.bossones.calc.stack.Stack;
 
 import java.util.Objects;
 
+/**
+ * Utility for creating polish notation
+ */
 public class PolishNotation {
 
+    /**
+     * Fabric method for creating polish notation
+     * @param expression for calculating
+     * @return string of polish notation
+     */
     public static LinkedList<String> makeNote(String expression) {
         Objects.requireNonNull(expression);
         LinkedList<String> polishNote = new LinkedList<>();
@@ -70,6 +78,11 @@ public class PolishNotation {
         return polishNote;
     }
 
+    /**
+     * Load all operators until opening bracket to polish notation linked list.
+     * @param polishNote is a linked list needs to load operators
+     * @param operators - operators of expression
+     */
     private static void clearUntilOpenBracket(LinkedList<String> polishNote, Stack<Character> operators) {
         while (!operators.isEmpty() && operators.peek() != '(') {
             polishNote.addLast(operators.remove().toString());
@@ -83,12 +96,22 @@ public class PolishNotation {
         }
     }
 
+    /**
+     * Load all operators until end to polish notation linked list.
+     * @param polishNote is a linked list needs to load operators.
+     * @param operators of expression
+     */
     private static void clearUntilEnd(LinkedList<String> polishNote, Stack<Character> operators) {
         while (!operators.isEmpty() && operators.peek() != '(') {
             polishNote.addLast(operators.remove().toString());
         }
     }
 
+    /**
+     * Load next digit to polish notation linked list.
+     * @param digit for loading to polish notation
+     * @param polishNote is a linked list
+     */
     private static void loadDigitToNote(StringBuilder digit, LinkedList<String> polishNote) {
         if (digit.length() > 0) {
             polishNote.addLast(digit.toString());
